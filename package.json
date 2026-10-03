@@ -1,0 +1,24 @@
+{
+  "name": "brivon-hardhat-erc20-deployer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Hardhat 3 and Ignition fixed-supply ERC-20 deployment example",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "compile": "hardhat build",
+    "deploy:local": "hardhat ignition deploy ignition/modules/CreatorToken.js",
+    "deploy:testnet": "hardhat ignition deploy ignition/modules/CreatorToken.js --network brivonTestnet",
+    "api:networks": "node scripts/list-networks.mjs"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "5.7.0",
+    "dotenv": "16.6.1"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-viem": "5.0.7",
+    "hardhat": "3.9.1"
+  }
+}
